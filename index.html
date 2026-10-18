@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ClipForge AI — Turn long videos into shorts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">✦</span><span>clipforge<span class="accent">.ai</span></span></a>
+    <div class="top-right"><span class="status-dot"></span><span>AI workspace</span><span class="avatar">CF</span></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="spark">✦</span> AI VIDEO REPURPOSING</div>
+      <h1>Your long video.<br><span class="gradient">A week of short-form content.</span></h1>
+      <p class="subhead">Find standout moments, generate vertical clips, and add dynamic word-by-word captions — automatically.</p>
+    </section>
+    <section class="workspace">
+      <div class="panel upload-panel">
+        <div class="panel-heading"><div><span class="step">01</span><h2>Upload your video</h2></div><span class="pill">MP4 · MOV · WEBM</span></div>
+        <label id="dropzone" class="dropzone" for="videoFile">
+          <input type="file" id="videoFile" accept="video/mp4,video/quicktime,video/webm,video/x-matroska,.m4v">
+          <span class="upload-icon">↑</span><strong>Drop your video here</strong><span class="muted">or click to browse files</span>
+          <span class="file-limit">Upload limit: 1.5 GB · processing runs on your server</span>
+        </label>
+        <div id="fileInfo" class="file-info hidden"></div>
+        <div class="settings">
+          <div class="setting"><label>Clip length</label><div class="setting-value">Up to 35 sec <span>⌄</span></div></div>
+          <div class="setting"><label>Aspect ratio</label><div class="setting-value">▯ 9:16 Vertical <span>⌄</span></div></div>
+          <div class="setting"><label>Captions</label><div class="setting-value"><span class="yellow-dot"></span> Word highlighting <span>✓</span></div></div>
+        </div>
+        <button id="generateBtn" class="primary" disabled><span>✦</span> Generate AI clips <span class="arrow">→</span></button>
+        <p class="privacy-note">⌑ Your video is processed by this server. Only upload content you have permission to use.</p>
+      </div>
+      <div class="panel results-panel">
+        <div class="panel-heading"><div><span class="step">02</span><h2>Your clips</h2></div><span id="clipCount" class="pill">Waiting for video</span></div>
+        <div id="emptyState" class="empty-state">
+          <div class="empty-art"><div class="art-card back"></div><div class="art-card mid"></div><div class="art-card front"><span>▶</span><i></i><i></i><i></i></div><div class="mini-spark">✦</div></div>
+          <h3>Your next viral moment starts here</h3><p>Upload a video to discover highlights and turn them into ready-to-share shorts.</p>
+          <div class="feature-row"><span>✦ AI highlights</span><span>▤ Dynamic captions</span><span>▯ Vertical export</span></div>
+        </div>
+        <div id="progressState" class="progress-state hidden">
+          <div class="processing-icon">✦</div><h3 id="progressTitle">Preparing your video…</h3><p id="progressMessage">This can take a few minutes.</p>
+          <div class="progress-track"><div id="progressBar"></div></div><div class="progress-meta"><span id="progressPercent">0%</span><span>AI processing</span></div>
+        </div>
+        <div id="errorState" class="error-state hidden"></div>
+        <div id="clipsList" class="clips-list"></div>
+      </div>
+    </section>
+    <section class="bottom-note"><span>✦</span><div><strong>Made for the scroll</strong><p>Vertical 9:16 exports with active-word caption highlighting, ready for your editing workflow.</p></div><span class="bottom-tag">CLIPFORGE AI</span></section>
+  </main>
+  <footer>CLIPFORGE AI <span>·</span> A self-hosted AI clip maker starter</footer>
+</div>
+<script src="/static/app.js"></script>
+</body></html>

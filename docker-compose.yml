@@ -1,0 +1,13 @@
+services:
+  clipforge:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DATA_DIR: /data
+      WHISPER_MODEL: base
+      WHISPER_DEVICE: cpu
+    volumes:
+      - clipforge_data:/data
+volumes:
+  clipforge_data:
